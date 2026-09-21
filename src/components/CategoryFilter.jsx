@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 
 export default function CategoryFilter() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const activeCategory = searchParams.get("q") || ""
+  const activeCategory = searchParams.get("category") || ""
   const handleSelect = (id) => {
     setSearchParams(id ? {category: id} : {})
   }
