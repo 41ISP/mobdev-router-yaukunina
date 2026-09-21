@@ -1,6 +1,9 @@
+import { useLocation, useNavigate } from 'react-router-dom';
 import StatusBlock from '../components/StatusBlock.jsx';
 
-export default function NotFoundPage({ path, onGoHome }) {
+export default function NotFoundPage() {
+  const navigation = useNavigate()
+  const location = useLocation()
   return (
     <section className="page-shell">
       <StatusBlock
